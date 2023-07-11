@@ -58,7 +58,7 @@ Note that this example may create resources which cost money. Run `terraform des
 
 ```hcl
 module "bucket-replication" {
-    source = "./s3-bucket"
+    source = "git::https://github.com/sahilj713/s3_replication_same_and_cross_region.git//s3-bucket"
     iam_role_name = "tf-iam-role-replication-1234567"
     iam_policy_name = "tf-iam-role-policy-replication-1234567"
     source-region = "us-east-1"
